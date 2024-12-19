@@ -1,0 +1,44 @@
+<% layout("../layout/boilerplate.ejs") %>
+<body>
+    <div class="row">
+        <div class="col offset-3 mt-4">
+            <h2>Edit Listings</h2>
+        </div>
+       <form method="POST" action="/listings/<%=edit._id %>?_method=PUT">
+        <div class="col-6 offset-3 mt-5">
+            <div class="col mb-3">
+                <label class="form-input" for="title">Title</label>
+                <input class="form-control" value="<%=edit.title%>" id="title" type="text" name="edit[title]">
+            </div>
+            <div class="col mb-3">
+                <label class="form-input" for="description">Description</label>
+                <textarea class="form-control" name="" id="description" name="edit[description]"  type="text"><%=edit.description%></textarea>
+               
+            </div>
+            <div class="col mb-3">
+                <label class="form-input" for="image">image Url</label>
+                <input class="form-control"  value="<%=edit.image.url%>" name="edit[image.url]" id="image" type="text">
+            </div>
+            <div class="col mb-3">
+                <label class="form-input" for="price">price</label>
+                <input class="form-control" value="<%=edit.price%>" name="edit[price]"  id="price" type="number">
+            </div>
+            <div class="col mb-3">
+                <label class="form-input" for="country">country</label>
+                <input class="form-control" value="<%=edit.country%>" name="edit[country]"  id="country" type="text">
+            </div>
+            <div class="col mb-3">
+                <label class="form-input" for="location">location</label>
+                <input  class="form-control" value="<%=edit.location%>" name="edit[location]"  id="location" type="text">
+            </div>
+            <button class="btn btn-primary mt-4">Submit</button>
+            
+           </div>
+           
+            
+       </form>
+        
+    </div>
+
+    
+</body>

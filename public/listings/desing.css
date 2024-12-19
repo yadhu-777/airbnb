@@ -1,0 +1,45 @@
+
+
+.card-img-top{
+    height: 20rem !important;
+    border-radius: 1rem !important;
+    margin-right: 2rem !important;
+    
+
+}
+.navbar{
+    height: 6rem !important;
+    background-color: white !important;
+    font-size: 1.2rem !important;
+   font-weight: 600 !important;
+   
+   
+}
+.link{
+    text-decoration: none !important;
+    color: black;
+}
+.cont{
+    padding: 1rem ;
+}
+.card-body{
+    font-weight: 500 !important;
+    padding: 0.3rem !important;
+}
+
+.navbar-brand{
+    font-size: 2.5rem !important;
+color: #FF5A5F !important;
+}
+.card{
+    border: none !important;
+    width: 28rem !important;
+    
+}
+.aloo{
+    color: white !important;
+    background-color: #FF5A5F !important;
+}
+.form-control{
+   border-color: black !important;
+}

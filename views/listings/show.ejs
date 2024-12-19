@@ -1,0 +1,36 @@
+<% layout("../layout/boilerplate.ejs") %>
+<body>
+    <div class="row ">
+    <div class="col-5 offset-3">
+   
+      <div class="card col  mb-3 " >
+        <img src="<%=info.image.url%>" class="card-img-top mb-2" alt="listings-image">
+        <div class="card-body">
+          <p class="card-text"><%=info.title%></p>
+          <p>₹<%=info.price%>/night</p>
+          <p><%=info.description%></p>
+          <p><%=info.location%></p>
+          <p><%=info.country%></p>
+        </div>
+        
+      </div>
+    
+  
+    <div class="row ">
+      <div class="col-1">
+        <form method="POST" action="/listings/<%=info._id%>/edit">
+          <button class="btn btn-primary me-1 ">Edit</button>
+        </form>
+      </div>
+      <div class="col-1">
+        <form method="POST" action="/listings/<%=info._id%>?_method=DELETE">
+          <button class="btn btn-danger">Delete</button>
+        </form>
+      </div>
+
+        
+    </div>
+  
+    </div>
+    </div>
+</body>

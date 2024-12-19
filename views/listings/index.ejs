@@ -1,0 +1,21 @@
+<% layout("../layout/boilerplate.ejs") %>
+
+<body>
+    <h2 class="mb-3">DESTINATIONS</h2>
+   <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-1">
+   
+    <% for(dt of data) { %> 
+       <a class="link"   href="/listings/<%=dt._id%>">
+         
+        <div class="card-col mb-3 " >
+          <img src="<%=dt.image.url%>" class="card-img-top   mb-2" alt="listings-image">
+          <div class="card-body">
+            <p class="card-text"><%=dt.title%></p>
+          </div>
+        </div>
+       </a>
+        
+        <%}%>
+   </div>
+    
+</body>

@@ -1,0 +1,54 @@
+<% layout("../layout/boilerplate.ejs") %>
+<body>
+   
+    <div class="row mt-1">
+      
+        <div class="col-5 offset-3 mt-5">
+            <h2 class="mb-5">Add Listings</h2>
+
+            <form method="POST"  action="/listings">
+            <div class="col  mb-3">
+                <label class="form-input mb-1" for="title">Enter Title</label>
+                <input  id="title" name="listings[title]"   type="text" class="form-control required">
+                
+            </div>
+
+            <div class="col  mb-3">
+                <label class="form-input mb-1" for="description">Enter Description</label>
+                <textarea name="listings[description]" id="description" class="form-control"></textarea>
+           
+            </div>
+
+
+           
+
+<div class="row">
+    <div class="col  ">
+        <label class="form-input mb-1" for="image">Image Url</label>
+    <input  id="image" name="listings[image]"  class="form-control "  type="text">
+    </div>
+    <div class="col-3">
+        <label class="form-input mb-1" for="price">Enter Price</label>
+    <input  id="price" name="listings[price]"   class="form-control" type="number">
+    </div>
+  
+</div>
+
+<div class="col">
+    <label class="form-input mb-1" for="country">Enter Country</label>
+    <input  id="country" name="listings[country]"   class="form-control" type="text">
+
+   </div>
+
+           <div class="col  mb-3">
+            <label class="form-input mb-1" for="Location">Enter Location</label>
+            <input  id="Location" name="listings[location]"  class="form-control"  type="text">
+
+           </div>
+           
+            <button class="btn aloo  mt-3" >Add</button>
+        </form>
+        </div>
+        
+    </div>
+</body>
