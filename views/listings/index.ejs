@@ -7,7 +7,7 @@
     <% for(dt of data) { %> 
        <a class="link"   href="/listings/<%=dt._id%>">
          
-        <div class="card-col mb-3 " >
+        <div class="card-col mb-3  " >
           <img src="<%=dt.image.url%>" class="card-img-top   mb-2" alt="listings-image">
           <div class="card-body">
             <p class="card-text"><%=dt.title%></p>
@@ -16,6 +16,8 @@
        </a>
         
         <%}%>
+
+        
    </div>
     
 </body>

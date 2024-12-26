@@ -1,9 +1,9 @@
-class Experr extends Error {
-    constructor(status,message){
-        super(message);
+class ExError extends Error {
+    constructor(status, message) {
+        super();
         this.status = status;
-        
+        this.message = message;
     }
 }
 
-module.exports=Experr;
+module.exports = ExError;

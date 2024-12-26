@@ -6,16 +6,20 @@
         <div class="col-5 offset-3 mt-5">
             <h2 class="mb-5">Add Listings</h2>
 
-            <form method="POST"  action="/listings">
+            <form method="POST"  action="/listings" novalidate class="needs-validation">
             <div class="col  mb-3">
                 <label class="form-input mb-1" for="title">Enter Title</label>
-                <input  id="title" name="listings[title]"   type="text" class="form-control required">
-                
+                <input  id="title" name="listing[title]"   type="text" class="form-control " required>
+                <div class="valid-feedback">Good Title</div>
+                <div class="invalid-feedback">Need Title</div>
             </div>
+           
 
             <div class="col  mb-3">
                 <label class="form-input mb-1" for="description">Enter Description</label>
-                <textarea name="listings[description]" id="description" class="form-control"></textarea>
+                <textarea name="listing[description]" id="description" class="form-control " required></textarea>
+                <div class="valid-feedback" >Good Description</div>
+                <div class="invalid-feedback">Need Description</div>
            
             </div>
 
@@ -25,24 +29,32 @@
 <div class="row">
     <div class="col  ">
         <label class="form-input mb-1" for="image">Image Url</label>
-    <input  id="image" name="listings[image]"  class="form-control "  type="text">
+    <input  id="image" name="listing[image]"  class="form-control "   type="text">
+    <div class="valid-feedback">Good Image</div>
+                
     </div>
     <div class="col-3">
         <label class="form-input mb-1" for="price">Enter Price</label>
-    <input  id="price" name="listings[price]"   class="form-control" type="number">
+    <input  id="price" name="listing[price]"   class="form-control" required type="number">
+    <div class="valid-feedback">Good Price</div>
+                <div class="invalid-feedback">Need Price To List</div>
     </div>
   
 </div>
 
 <div class="col">
     <label class="form-input mb-1" for="country">Enter Country</label>
-    <input  id="country" name="listings[country]"   class="form-control" type="text">
+    <input  id="country" name="listing[country]"   class="form-control" required type="text">
+    <div class="valid-feedback"></div>
+                <div class="invalid-feedback">Need Country Name</div>
 
    </div>
 
            <div class="col  mb-3">
             <label class="form-input mb-1" for="Location">Enter Location</label>
-            <input  id="Location" name="listings[location]"  class="form-control"  type="text">
+            <input  id="Location" name="listing[location]"  class="form-control"  type="text" required>
+            <div class="valid-feedback"></div>
+                <div class="invalid-feedback">Need Location</div>
 
            </div>
            
