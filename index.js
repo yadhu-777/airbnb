@@ -16,6 +16,10 @@ let reviews = require("./routes/review.js");
 let joi = require("joi");
 let session = require("express-session");
 let flash = require("connect-flash");
+let user = require("./models/user.js");
+let passport = require("passport");
+let LocalStrategy = require("passport-local");
+let userroute = require("./routes/user.js");
 
 
 
@@ -34,21 +38,29 @@ let sessionOption ={
   saveUninitialized:true,
   cookie:{
     expires: Date.now() + 7 * 24 *60 *60 *1000,
-    maxAge: Date.now() + 7 * 24 *60 *60 *1000,
+    maxAge:  7 * 24 *60 *60 *1000,
     httpOnly:true
   }
 
 }
 app.use(session(sessionOption));
 app.use(flash());
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new LocalStrategy(user.authenticate()));
+passport.serializeUser(user.serializeUser());
+passport.deserializeUser(user.deserializeUser());
+
+
 app.use((req,res,next)=>{
   res.locals.success = req.flash("success");
   res.locals.error = req.flash("error");
   res.locals.nfound = req.flash("found");
   next();
-})
+});
 app.use("/listings",listings);
 app.use("/listings/:id/review",reviews);
+app.use("/",userroute);
 
 
 

@@ -1,6 +1,7 @@
 body{
     display: flex;
     flex-direction: column;
+    font-family: Arial, sans-serif;
     min-height: 100vh !important;
 }
 
