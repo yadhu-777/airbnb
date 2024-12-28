@@ -22,7 +22,13 @@ router.get("/",(async(req,res)=>{
    res.render("./listings/index.ejs",{data});
 }));
 router.get("/new",(req,res)=>{
-  res.render("./listings/new.ejs");
+  if(!req.isAuthenticated()){
+    req.flash("error","you must login before adding  listings");
+    return  res.redirect("/login");
+  }
+    res.render("./listings/new.ejs");
+  
+
 });
 
 

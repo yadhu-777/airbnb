@@ -4,11 +4,11 @@
 <div class="row">
     <h1 class="offset-5 mt-4">Login</h1>
     <div class="col-4 offset-4">
-        <form class="mt-5" method="POST" action="/login">
+        <form class="mt-5" method="POST" action="/login"  novalidate class="needs-validation">
             <label class="form-label "  for="username">Username</label>
             <input class="form-control mb-3" name="username" id="username" type="text" required>
             <label class="form-label"  for="password">Password</label>
-            <input class="form-control" name="password" id="password" type="text" required>
+            <input class="form-control" name="password" id="password" type="password" required>
             <button class="btn btn-primary mt-4">Login</button>
         </form>
     </div>
